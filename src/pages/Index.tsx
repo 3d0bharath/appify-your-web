@@ -1,12 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect, useRef } from "react";
 
 const Index = () => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    // Set iframe to full viewport height
+    const setIframeHeight = () => {
+      if (iframeRef.current) {
+        iframeRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    setIframeHeight();
+    window.addEventListener("resize", setIframeHeight);
+
+    return () => window.removeEventListener("resize", setIframeHeight);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="w-full h-screen overflow-hidden">
+      <iframe
+        ref={iframeRef}
+        src="/dhyanam_app.html"
+        className="w-full border-0"
+        title="Dhyanam Wellness App"
+        sandbox="allow-scripts allow-same-origin allow-forms"
+      />
     </div>
   );
 };

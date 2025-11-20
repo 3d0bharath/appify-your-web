@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Dhyanam Wellness Mobile App
 
-## Project info
+A wellness app featuring yoga instruction, diet planning, and lifestyle coaching, available as native iOS and Android applications.
 
-**URL**: https://lovable.dev/projects/affe9546-10b3-4089-bf8e-52049d181599
+## 🎯 Project Overview
 
-## How can I edit this code?
+This project is a mobile app built with:
+- **React** + **TypeScript** for the UI
+- **Vite** for fast development and building
+- **Capacitor** for native iOS and Android functionality
+- **Tailwind CSS** for styling
 
-There are several ways of editing your application.
+## 📱 Getting Started
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/affe9546-10b3-4089-bf8e-52049d181599) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### For Local Development (Web)
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### For Mobile App Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+See **[QUICK_START.md](QUICK_START.md)** for testing on devices/emulators.
 
-**Use GitHub Codespaces**
+See **[MOBILE_BUILD_GUIDE.md](MOBILE_BUILD_GUIDE.md)** for complete publishing instructions.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📂 Project Structure
 
-## What technologies are used for this project?
+```
+├── src/                   # React source code
+├── public/               # Static assets
+├── android/              # Android native project (created after npx cap add android)
+├── ios/                  # iOS native project (created after npx cap add ios)
+├── capacitor.config.ts   # Capacitor configuration
+└── MOBILE_BUILD_GUIDE.md # Complete publishing guide
+```
 
-This project is built with:
+## 🚀 Quick Commands
 
-- Vite
+```bash
+# Development
+npm run dev              # Start dev server
+
+# Building
+npm run build           # Build for production
+npx cap sync            # Sync to native platforms
+
+# Mobile Development
+npx cap add android     # Add Android platform
+npx cap add ios         # Add iOS platform
+npx cap open android    # Open in Android Studio
+npx cap open ios        # Open in Xcode
+```
+
+## 📖 Documentation
+
+- **[QUICK_START.md](QUICK_START.md)** - Quick reference for testing locally
+- **[MOBILE_BUILD_GUIDE.md](MOBILE_BUILD_GUIDE.md)** - Complete guide to publish to app stores
+
+## 🏪 Publishing to App Stores
+
+This app is ready to be published to:
+- ✅ Google Play Store (Android)
+- ✅ Apple App Store (iOS)
+
+Follow the comprehensive guide in **MOBILE_BUILD_GUIDE.md** for step-by-step instructions.
+
+## 🛠️ Tech Stack
+
+- React 18
 - TypeScript
-- React
-- shadcn-ui
+- Vite
+- Capacitor 6
 - Tailwind CSS
+- React Router
 
-## How can I deploy this project?
+## 📄 License
 
-Simply open [Lovable](https://lovable.dev/projects/affe9546-10b3-4089-bf8e-52049d181599) and click on Share -> Publish.
+See project settings for license information.
 
-## Can I connect a custom domain to my Lovable project?
+## 🤝 Contributing
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is managed through [Lovable](https://lovable.dev). Export to GitHub to enable collaboration.
